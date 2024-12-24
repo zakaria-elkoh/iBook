@@ -11,7 +11,6 @@ export class DynamoDBService {
     });
   }
 
-  // Create
   async createItem(tableName: string, item: Record<string, any>): Promise<any> {
     const params = {
       TableName: tableName,
@@ -20,7 +19,6 @@ export class DynamoDBService {
     return this.dynamoDB.put(params).promise();
   }
 
-  // Read: Get a single item
   async getItem(tableName: string, key: Record<string, any>): Promise<any> {
     const params = {
       TableName: tableName,
